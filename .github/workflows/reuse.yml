@@ -16,5 +16,7 @@ jobs:
     - name: demo
       id: outputid
       run: echo "name=asif" >> $GITHUB_OUTPUT
+    - name: printing input
+      run: echo ${{ inputs.firstinput }}
           
         
