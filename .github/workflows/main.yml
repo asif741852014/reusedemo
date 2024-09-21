@@ -1,0 +1,13 @@
+name: main
+on:
+    push: 
+      branches: 
+      - 'main'
+jobs:
+  job1:
+    uses: .github/workflows/reuse.yml
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: printing output
+      run: echo "${{ needs.job1.outputs.outputpass }}"
